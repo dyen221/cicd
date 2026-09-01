@@ -40,7 +40,6 @@
 						<applicationName>cicd-sandbox</applicationName>
 						<target>Cloudhub-US-East-1</target>
 						<provider>MC</provider>
-						<businessGroupId>843af8a8-5b03-45a4-a65e-adfe278c0016</businessGroupId>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
 					</cloudhub2Deployment>
