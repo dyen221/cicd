@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="4881d6af-1b5b-4a27-8f14-fe0023e5c40f" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="cicdFlow" doc:id="981f5bea-cea4-498f-94e0-37af84091d4c" >
+		<http:listener doc:name="Listener" doc:id="9efbd30a-8636-4afe-b005-b8c85372cc94" config-ref="HTTP_Listener_config" path="/cicd" />
+		<logger level="INFO" doc:name="Logger" doc:id="d161558c-5d66-4d9d-bbac-abf3bfeeacf4" message="#[payload]" />
+		<set-payload value='#["cicd process is enabled"]' doc:name="Set Payload" doc:id="1fec7ec6-7c0e-4ca7-ade2-32da34714deb" />
+		<logger level="INFO" doc:name="Logger1" doc:id="3943b1fd-f00a-4ef5-be1e-6239759a1b01" message="#[payload]" />
+	</flow>
+</mule>
