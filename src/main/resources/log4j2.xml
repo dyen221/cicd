@@ -9,8 +9,13 @@
         see them in the mule_ee.log file. -->
 
     <Appenders>
+<<<<<<< HEAD
         <RollingFile name="file" fileName="${sys:mule.home}${sys:file.separator}logs${sys:file.separator}mulecicd.log"
                  filePattern="${sys:mule.home}${sys:file.separator}logs${sys:file.separator}mulecicd-%i.log">
+=======
+        <RollingFile name="file" fileName="${sys:mule.home}${sys:file.separator}logs${sys:file.separator}cicd.log"
+                 filePattern="${sys:mule.home}${sys:file.separator}logs${sys:file.separator}cicd-%i.log">
+>>>>>>> e88936d6627e9a9636ca2a3ad0805d3baf532e30
             <PatternLayout pattern="%-5p %d [%t] [processor: %X{processorPath}; event: %X{correlationId}] %c: %m%n"/>
             <SizeBasedTriggeringPolicy size="10 MB"/>
             <DefaultRolloverStrategy max="10"/>
