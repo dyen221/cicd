@@ -29,21 +29,6 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-				<configuration>
-					<cloudhub2Deployment>
-						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>${app.runtime}</muleVersion>
-						<connectedAppClientId>${anypoint.client.id}</connectedAppClientId>
-						<connectedAppClientSecret>${anypoint.client.secret}</connectedAppClientSecret>
-						<connectedAppGrantType>client_credentials</connectedAppGrantType>
-						<environment>Sandbox</environment>
-						<applicationName>cicd-sandbox</applicationName>
-						<target>Cloudhub-US-East-1</target>
-						<provider>MC</provider>
-						<replicas>1</replicas>
-						<vCores>0.1</vCores>
-					</cloudhub2Deployment>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
